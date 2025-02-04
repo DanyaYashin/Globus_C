@@ -9,6 +9,7 @@ export default function Home() {
     "Отзыв 1: Отличная компания!",
     "Отзыв 2: Быстрая помощь!",
     "Отзыв 3: Рекомендую всем!",
+    "Разнообразный и богатый опыт говорит нам, что внедрение современных методик играет важную роль в формировании анализа существующих паттернов поведения. Приятно, граждане, наблюдать, как действия представителей оппозиции, вне зависимости от их уровня, должны быть указаны как претенденты на роль ключевых факторов."
   ];
 
   // Автоматическое переключение отзывов
@@ -234,7 +235,7 @@ export default function Home() {
         </div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 content-center h-svh w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD] "//Блок с отзывами и новостями!!!!!!!!!!!!!!!!!!!!!
+        <div className="grid grid-cols-1 md:grid-cols-2  content-center h-svh w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD] "//Блок с отзывами и новостями!!!!!!!!!!!!!!!!!!!!!
         >
           <div className='my-auto mx-10'>
             <div className='grid gap-10'>
@@ -244,21 +245,21 @@ export default function Home() {
 
               <div className='relative grid grid-cols-1'>
                 <div className="">
-                  <div className="carousel-item w-full text-center p-4 drop-shadow-lg transition-all duration-500">
+                  <div className="carousel-item w-full text-center p-4 px-10 drop-shadow-lg transition-all duration-500">
                     <p className="text-lg text-[#14281D]">{reviews[currentIndex]}</p>
                   </div>
                 </div>
 
-                <div onClick={handlePrevious} className='cursor-pointer grid place-content-center absolute left-0 bg-[#376D4F] opacity-30 hover:opacity-100 hover:bg-[#376D4F] text-white rounded-full transition-all duration-300 w-6 h-6 '>
+                <div className='h-full absolute place-content-center'><div onClick={handlePrevious} className='cursor-pointer grid  bg-[#376D4F] opacity-30 hover:opacity-100 hover:bg-[#376D4F] text-white rounded-full transition-all duration-300 w-6 h-6 '>
                   <button
                     className="-mt-0.5"
                     aria-label="Предыдущий отзыв"
                   >
                     &#8249;
                   </button>
-                </div>
+                </div></div>
 
-                <div onClick={handleNext} className='cursor-pointer grid place-content-center absolute right-0 bg-[#376D4F] opacity-30 hover:opacity-100 hover:bg-[#376D4F] text-white rounded-full transition-all duration-300 w-6 h-6'>
+                <div className='h-full absolute place-content-center right-0'><div onClick={handleNext} className='cursor-pointer grid bg-[#376D4F] opacity-30 hover:opacity-100 hover:bg-[#376D4F] text-white rounded-full transition-all duration-300 w-6 h-6'>
                   <button
                     className="-mt-0.5"
                     aria-label="Следующий отзыв"
@@ -266,7 +267,7 @@ export default function Home() {
                     &#8250;
                   </button>
                 </div>
-              </div>
+              </div></div>
 
               <div className="flex gap-1 justify-center">
                 {reviews.map((_, index) => (
@@ -282,16 +283,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 md:mt-0 w-4/5 md:w-3/4 xl:w-2/3 h-60vh bg-gradient-to-b from-[#14281D] from-30% to-[#E0C28D] mx-auto border-hidden rounded-xl overflow-hidden shadow-lg">
-            <div className="w-full h-full p-6">
+          <div className="mt-10 md:mt-0 w-4/5 md:w-3/4 xl:w-2/3 h-60vh bg-gradient-to-b from-[#14281D] from-30% to-[#E0C28D] mx-auto border-hidden rounded-xl shadow-lg relative">
+            <div className="w-full h-full px-6 pt-6">
               <h3 className="xl:text-2xl md:text-xl font-bold text-[#ffffff] mb-4 text-center">
                 Лента новостей
               </h3>
-              <div className="news-list space-y-4 overflow-y-auto ">
+              <div className="news-list space-y-4 overflow-y-scroll h-50vh scrollbar-hide">
+              
                 {[
                   "Новость 1: Новая услуга для бизнеса.",
                   "Новость 2: Скидка на бухгалтерские услуги.",
                   "Новость 3: Наш офис теперь открыт в выходные!",
+                  "Для современного мира убеждённость некоторых оппонентов предопределяет высокую востребованность новых принципов формирования материально-технической и кадровой базы. Однозначно, независимые государства лишь добавляют фракционных разногласий и преданы социально-демократической анафеме. Значимость этих проблем настолько очевидна, что социально-экономическое развитие требует определения и уточнения форм воздействия.",
+                  "Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: курс на социально-ориентированный национальный проект способствует повышению качества своевременного выполнения сверхзадачи. Ясность нашей позиции очевидна: дальнейшее развитие различных форм деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи."
                 ].map((news, index) => (
                   <div
                     key={index}
@@ -300,8 +304,11 @@ export default function Home() {
                     <p className="xl:text-lg md:text-md sm:text-sm text-[#14281D] ">{news}</p>
                   </div>
                 ))}
+                
               </div>
+              
             </div>
+            <div className='absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#2b2417] to-[#000000]/0 border-hidden rounded-b-xl'></div>
           </div>
 
         </div>

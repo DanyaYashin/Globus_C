@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import scrollbarHide from 'tailwind-scrollbar-hide'
 
 export default {
   content: [
@@ -14,12 +15,18 @@ export default {
       },
       height: {
         '60vh': '60vh',
-
+        '50vh': '50vh',
       },
       fontFamily: {
 				'сormorant': ['Cormorant'],
 			},
+      margin:{
+        '45%': '45%',
+        '136.5px': '136.5px'
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 } satisfies Config;
