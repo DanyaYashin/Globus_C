@@ -49,7 +49,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row h-svh w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD]"//Заглавный блок!!!!!!!!!!!!!!!
         >
           <section
-            className="w-full sm:w-1/2 p-4 flex items-center justify-center relative"
+            className="w-full sm:w-1/2 p-4 flex items-center justify-center relative h-1/3 sm:h-auto"
             style={{
               backgroundImage: "url('/bgphotogreen.png')",
               backgroundSize: "cover",
@@ -72,7 +72,7 @@ export default function Home() {
           </section>
 
 
-          <section className="sm:w-1/2 p-4 flex flex-col justify-center">
+          <section className="sm:w-1/2 p-4 flex flex-col justify-center mt-10 sm:mt-0 mr-0 sm:mr-4">
             <div className="xl:text-3xl md:text-2xl text-xl text-center font-bold text-[#376D4F] mb-6 tracking-wide drop-shadow-sm">
               Услуги для малого и среднего бизнеса
             </div>
@@ -205,19 +205,19 @@ export default function Home() {
             <div className="md:hidden flex flex-col gap-10 my-10">
               {["ООО", "ИП с работниками", "ИП без работников", "Нулевая ООО"].map((header, colIndex) => (
                 <div key={colIndex} className="border rounded-lg shadow-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] text-white px-6 py-4 font-semibold text-lg">
+                  <div className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] px-6 py-4 font-semibold text-lg">
                     {header}
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col text-black text-base font-сormorant">
                     {["ОСНО", "УСН доходы", "УСН доходы-расходы", "УСН с НДС доходы", "УСН с НДС доходы-расходы", "УСН + патент", "Патент"].map((rowName, rowIndex) => (
                       <div
                         key={rowIndex}
-                        className={`flex justify-between p-4 ${rowIndex % 2 === 0 ? "bg-gradient-to-r from-[#C2A878] to-[#E0C28D]" : "bg-gradient-to-r from-[#6E633D] to-[#8C7A4E] text-white"}`}
+                        className={`flex justify-between p-4 ${rowIndex % 2 === 0 ? "bg-gradient-to-r from-[#C2A878] to-[#E0C28D]" : "bg-gradient-to-r from-[#6E633D] to-[#8C7A4E]"}`}
                       >
-                        <span className="font-semibold">{rowName}</span>
+                        <span className="">{rowName}</span>
                         <input
                           type="text"
-                          className="bg-transparent outline-none text-right font-medium"
+                          className="bg-transparent outline-none text-right font-medium text-black"
                           defaultValue={
                             rowIndex === 0 && colIndex === 0 ? "от 10 000 р в месяц" : rowIndex === 1 && colIndex === 0 ? "от 7 000 р в месяц" : rowIndex === 2 && colIndex === 0 ? "от 9 000 р в месяц" : rowIndex === 3 && colIndex === 0 ? "от 12 000 р в месяц" : rowIndex === 4 && colIndex === 0 ? "от 15 000 р в месяц" : rowIndex === 5 && colIndex === 0 ? "" : rowIndex === 6 && colIndex === 0 ? "" :
                               rowIndex === 0 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 1 && colIndex === 1 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 3 && colIndex === 1 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 1 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 1 ? "от 13 000 р в месяц" : rowIndex === 6 && colIndex === 1 ? "от 4 000 р в месяц" :
@@ -284,7 +284,7 @@ export default function Home() {
 
           <div className="mt-10 md:mt-0 w-4/5 md:w-3/4 xl:w-2/3 h-60vh bg-gradient-to-b from-[#14281D] from-30% to-[#E0C28D] mx-auto border-hidden rounded-xl overflow-hidden shadow-lg">
             <div className="w-full h-full p-6">
-              <h3 className="xl:text-2xl md:text-xl font-bold text-[#B7CCBD] mb-4 text-center">
+              <h3 className="xl:text-2xl md:text-xl font-bold text-[#ffffff] mb-4 text-center">
                 Лента новостей
               </h3>
               <div className="news-list space-y-4 overflow-y-auto ">
