@@ -16,6 +16,7 @@ export default {
       height: {
         '60vh': '60vh',
         '50vh': '50vh',
+        '48vh': '48vh',
       },
       fontFamily: {
 				'сormorant': ['Cormorant'],

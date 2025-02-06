@@ -235,10 +235,10 @@ export default function Home() {
         </div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2  content-center h-svh w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD] "//Блок с отзывами и новостями!!!!!!!!!!!!!!!!!!!!!
+        <div className="grid grid-cols-1 md:grid-cols-2  content-center md:h-svh h-full w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD] "//Блок с отзывами и новостями!!!!!!!!!!!!!!!!!!!!!
         >
-          <div className='my-auto mx-10'>
-            <div className='grid gap-10'>
+          <div className='my-auto mx-10 h-3/4 '>
+            <div className='grid gap-10 my-10'>
               <h3 className="text-2xl font-bold text-[#376D4F] text-center">
                 Отзывы клиентов
               </h3>
@@ -246,7 +246,7 @@ export default function Home() {
               <div className='relative grid grid-cols-1'>
                 <div className="">
                   <div className="carousel-item w-full text-center p-4 px-10 drop-shadow-lg transition-all duration-500">
-                    <p className="text-lg text-[#14281D]">{reviews[currentIndex]}</p>
+                    <p className="xl:text-lg md:text-md sm:text-sm text-[#14281D] ">{reviews[currentIndex]}</p>
                   </div>
                 </div>
 
@@ -283,12 +283,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 md:mt-0 w-4/5 md:w-3/4 xl:w-2/3 h-60vh bg-gradient-to-b from-[#14281D] from-30% to-[#E0C28D] mx-auto border-hidden rounded-xl shadow-lg relative">
-            <div className="w-full h-full px-6 pt-6">
+          <div className="my-10 md:mt-0 w-4/5 md:w-3/4 xl:w-2/3 h-60vh bg-gradient-to-b from-[#14281D] from-30% to-[#E0C28D] mx-auto border-hidden rounded-xl shadow-lg relative">
+            <div className="w-full h-full px-6 pt-6 ">
               <h3 className="xl:text-2xl md:text-xl font-bold text-[#ffffff] mb-4 text-center">
                 Лента новостей
               </h3>
-              <div className="news-list space-y-4 overflow-y-scroll h-50vh scrollbar-hide">
+              <div className="news-list space-y-4 overflow-y-scroll h-48vh scrollbar-hide">
               
                 {[
                   "Новость 1: Новая услуга для бизнеса.",
