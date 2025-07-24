@@ -25,6 +25,10 @@ export default {
         '45%': '45%',
         '136.5px': '136.5px'
       },
+      screens: {
+				'table': { 'raw': '(min-width: 860px)' },
+				// Add more custom height breakpoints as needed
+			},
     },
   },
   plugins: [

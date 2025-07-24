@@ -32,7 +32,7 @@ export default function Home() {
   };
 
 
-  
+
   return (
     <div className="min-h-screen w-full flex flex-col bg-gradient-to-br from-[#CFDDD3] from-30% to-[#A8C3B3] overflow-x-hidden font-сormorant">
       <Head>
@@ -69,39 +69,40 @@ export default function Home() {
                 fill="#FFFFFF"
               />
             </svg>
-            <h1 className="text-6xl font-serif text-white relative z-20 drop-shadow-lg">Глобус С</h1>
+            <h1 className="xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-serif text-white relative z-20 drop-shadow-lg">Глобус С</h1>
           </section>
 
 
           <section className="sm:w-1/2 p-4 flex flex-col justify-center mt-10 sm:mt-0 mr-0 sm:mr-4">
             <div className="xl:text-3xl md:text-2xl text-xl text-center font-bold text-[#376D4F] mb-6 tracking-wide drop-shadow-sm">
-              Услуги для малого и среднего бизнеса
+              <p className='mb-3'>Услуги для малого и среднего бизнеса</p>
+              <p>Удалённое ведение бухгалтерии</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:text-lg md:text-md sm:text-sm font-medium text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:text-lg md:text-base sm:text-sm font-medium text-white">
               <div className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] rounded-xl p-6 shadow-xl hover:scale-105 transition-transform cursor-pointer"
-              onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <h3>Бухгалтерский и налоговый учёт</h3>
               </div>
               <div className="bg-gradient-to-r from-[#355834] to-[#4A714D] rounded-xl p-6 shadow-xl hover:scale-105 transition-transform cursor-pointer"
-              onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <h3>Кадровый учёт и расчёт зарплаты</h3>
               </div>
               <div className="bg-gradient-to-r from-[#6E633D] to-[#8C7A4E] rounded-xl p-6 shadow-xl hover:scale-105 transition-transform cursor-pointer"
-              onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <h3>Электронный документооборот</h3>
               </div>
               <div className="bg-gradient-to-r from-[#C2A878] to-[#E0C28D] rounded-xl p-6 shadow-xl hover:scale-105 transition-transform cursor-pointer"
-              onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("target-section")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <h3>Сверка ЕНС</h3>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-10 mt-4 mx-auto">
               <a
-                href="https://t.me/your_channel"  // Замените на ссылку вашего канала в Telegram
+                href="https://t.me/Borodyula"  // Замените на ссылку вашего канала в Telegram
                 className="text-[#B7CCBD] hover:text-white transition-colors"
                 aria-label="Telegram"
               >
@@ -159,19 +160,19 @@ export default function Home() {
         </div>
 
 
-        <div id="target-section" className="overflow-x-auto md:h-svh w-svw content-center">
+        <div id="target-section" className="overflow-x-auto table:h-svh w-svw content-center">
           <div className="mx-10">
             {/* Контейнер для управления отображением */}
-            <div className="hidden md:block">
+            <div className="hidden table:block">
               {/* Обычная таблица для больших экранов */}
               <table className="table-auto w-full text-left border-collapse rounded-xl shadow-xl overflow-hidden">
                 <thead>
                   <tr className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] text-white">
-                    <th className="px-6 py-4 font-semibold text-lg"></th>
-                    <th className="px-6 py-4 font-semibold text-lg">ООО</th>
-                    <th className="px-6 py-4 font-semibold text-lg">ИП с работниками</th>
-                    <th className="px-6 py-4 font-semibold text-lg">ИП без работников</th>
-                    <th className="px-6 py-4 font-semibold text-lg">Нулевая ООО</th>
+                    <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm"></th>
+                    <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">ООО</th>
+                    <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">ИП с работниками</th>
+                    <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">ИП без работников</th>
+                    <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">Нулевая ООО</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -184,10 +185,10 @@ export default function Home() {
                         }`}
                     >
                       {Array.from({ length: 5 }).map((_, colIndex) => (
-                        <td key={colIndex} className="px-6 py-4 text-[#1E1E1E] font-medium">
-                          <input
-                            type="text"
-                            className="w-full bg-transparent outline-none text-[#1E1E1E] font-medium"
+                        <td key={colIndex} className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 text-[#1E1E1E] font-medium xl:text-base text-sm">
+                          <textarea
+                            rows={5}
+                            className="w-full bg-transparent outline-none text-[#1E1E1E] font-medium break-words whitespace-normal resize-none max-h-12 content-center"
                             defaultValue={rowIndex === 0 && colIndex === 0 ? "ОСНО" : rowIndex === 1 && colIndex === 0 ? "УСН доходы" : rowIndex === 2 && colIndex === 0 ? "УСН доходы-расходы" : rowIndex === 3 && colIndex === 0 ? "УСН с НДС доходы" : rowIndex === 4 && colIndex === 0 ? "УСН с НДС доходы-расходы" : rowIndex === 5 && colIndex === 0 ? "УСН + патент" : rowIndex === 6 && colIndex === 0 ? "Патент" :
                               rowIndex === 0 && colIndex === 1 ? "от 10 000 р в месяц" : rowIndex === 1 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 2 && colIndex === 1 ? "от 9 000 р в месяц" : rowIndex === 3 && colIndex === 1 ? "от 12 000 р в месяц" : rowIndex === 4 && colIndex === 1 ? "от 15 000 р в месяц" : rowIndex === 5 && colIndex === 1 ? "" : rowIndex === 6 && colIndex === 1 ? "" :
                                 rowIndex === 0 && colIndex === 2 ? "от 7 000 р в месяц" : rowIndex === 1 && colIndex === 2 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 2 ? "от 7 000 р в месяц" : rowIndex === 3 && colIndex === 2 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 2 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 2 ? "от 13 000 р в месяц" : rowIndex === 6 && colIndex === 2 ? "от 4 000 р в месяц" :
@@ -203,22 +204,22 @@ export default function Home() {
             </div>
 
             {/* Транспонированный вариант для мобильных экранов */}
-            <div className="md:hidden flex flex-col gap-10 my-10">
+            <div className="table:hidden flex flex-col gap-10 my-10">
               {["ООО", "ИП с работниками", "ИП без работников", "Нулевая ООО"].map((header, colIndex) => (
                 <div key={colIndex} className="border rounded-lg shadow-lg overflow-hidden">
                   <div className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] px-6 py-4 font-semibold text-lg">
                     {header}
                   </div>
-                  <div className="flex flex-col text-black text-base font-сormorant">
+                  <div className="flex flex-col text-black sm:text-base text-sm font-сormorant">
                     {["ОСНО", "УСН доходы", "УСН доходы-расходы", "УСН с НДС доходы", "УСН с НДС доходы-расходы", "УСН + патент", "Патент"].map((rowName, rowIndex) => (
                       <div
                         key={rowIndex}
-                        className={`flex justify-between p-4 ${rowIndex % 2 === 0 ? "bg-gradient-to-r from-[#C2A878] to-[#E0C28D]" : "bg-gradient-to-r from-[#6E633D] to-[#8C7A4E]"}`}
+                        className={`flex justify-between p-4  ${rowIndex % 2 === 0 ? "bg-gradient-to-r from-[#C2A878] to-[#E0C28D]" : "bg-gradient-to-r from-[#6E633D] to-[#8C7A4E]"}`}
                       >
-                        <span className="">{rowName}</span>
-                        <input
-                          type="text"
-                          className="bg-transparent outline-none text-right font-medium text-black"
+                        <span className="content-center">{rowName}</span>
+                        <textarea
+                          className="  bg-transparent outline-none text-right font-medium text-black w-full break-words whitespace-normal resize-none content-center"
+                          rows={2}
                           defaultValue={
                             rowIndex === 0 && colIndex === 0 ? "от 10 000 р в месяц" : rowIndex === 1 && colIndex === 0 ? "от 7 000 р в месяц" : rowIndex === 2 && colIndex === 0 ? "от 9 000 р в месяц" : rowIndex === 3 && colIndex === 0 ? "от 12 000 р в месяц" : rowIndex === 4 && colIndex === 0 ? "от 15 000 р в месяц" : rowIndex === 5 && colIndex === 0 ? "" : rowIndex === 6 && colIndex === 0 ? "" :
                               rowIndex === 0 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 1 && colIndex === 1 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 3 && colIndex === 1 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 1 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 1 ? "от 13 000 р в месяц" : rowIndex === 6 && colIndex === 1 ? "от 4 000 р в месяц" :
@@ -231,22 +232,27 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <div className='md:text-sm text-xs font-medium text-black my-5'>
+              <p>*Стоимость услуг увеличивается при наличии маркированных товаров, прослеживаемых товаров и экспортно/импортных операций.</p>
+              <p>*Стоимость сдачи нулевых отчетов для ООО - от 3000 р в квартал.</p>
+              <p>*Стоимость сдачи нулевых отчетов для ИП - от 3000 р в год.</p>
+            </div>
           </div>
         </div>
 
 
         <div className="grid grid-cols-1 md:grid-cols-2  content-center md:h-svh h-full w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD] "//Блок с отзывами и новостями!!!!!!!!!!!!!!!!!!!!!
         >
-          <div className='my-auto mx-10 h-3/4 '>
+          <div className='my-auto mx-10 min-h-3/4 '>
             <div className='grid gap-10 my-10'>
-              <h3 className="text-2xl font-bold text-[#376D4F] text-center">
+              <h3 className="xl:text-2xl md:text-xl text-lg font-bold text-[#376D4F] text-center">
                 Отзывы клиентов
               </h3>
 
               <div className='relative grid grid-cols-1'>
                 <div className="">
                   <div className="carousel-item w-full text-center p-4 px-10 drop-shadow-lg transition-all duration-500">
-                    <p className="xl:text-lg md:text-md sm:text-sm text-[#14281D] ">{reviews[currentIndex]}</p>
+                    <p className="xl:text-lg md:text-base sm:text-sm text-[#14281D] ">{reviews[currentIndex]}</p>
                   </div>
                 </div>
 
@@ -267,7 +273,7 @@ export default function Home() {
                     &#8250;
                   </button>
                 </div>
-              </div></div>
+                </div></div>
 
               <div className="flex gap-1 justify-center">
                 {reviews.map((_, index) => (
@@ -285,11 +291,11 @@ export default function Home() {
 
           <div className="my-10 md:mt-0 w-4/5 md:w-3/4 xl:w-2/3 h-60vh bg-gradient-to-b from-[#14281D] from-30% to-[#E0C28D] mx-auto border-hidden rounded-xl shadow-lg relative">
             <div className="w-full h-full px-6 pt-6 ">
-              <h3 className="xl:text-2xl md:text-xl font-bold text-[#ffffff] mb-4 text-center">
+              <h3 className="xl:text-2xl md:text-xl text-lg font-bold text-[#ffffff] mb-4 text-center">
                 Лента новостей
               </h3>
-              <div className="news-list space-y-4 overflow-y-scroll h-48vh scrollbar-hide">
-              
+              <div className="news-list space-y-4 overflow-y-scroll h-48vh scrollbar-hide ">
+
                 {[
                   "Новость 1: Новая услуга для бизнеса.",
                   "Новость 2: Скидка на бухгалтерские услуги.",
@@ -301,14 +307,14 @@ export default function Home() {
                     key={index}
                     className="p-4 bg-gradient-to-r from-[#C2A878] to-[#E0C28D] rounded-lg shadow-xl"
                   >
-                    <p className="xl:text-lg md:text-md sm:text-sm text-[#14281D] ">{news}</p>
+                    <p className="xl:text-base md:text-sm sm:text-xs text-[#14281D] ">{news}</p>
                   </div>
                 ))}
-                
+
               </div>
-              
+
             </div>
-            <div className='absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#2b2417] to-[#000000]/0 border-hidden rounded-b-xl'></div>
+            <div className='absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#2b2417] to-[#000000]/0 from-10% border-hidden rounded-b-xl'></div>
           </div>
 
         </div>
@@ -319,12 +325,14 @@ export default function Home() {
 
       <footer className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] text-white py-6 border-t border-[#376D4F]">
         <div className="container mx-auto flex flex-col items-center justify-center space-y-4">
-          <p className="text-lg font-medium tracking-wide text-center">
-            &copy; {new Date().getFullYear()} Глобус. Все права защищены.
+          <p className="xl:text-lg md:text-base sm:text-sm font-medium tracking-wide text-center">
+            &copy; {new Date().getFullYear()} Глобус С. Все права защищены.
           </p>
+          <p className="mt-4 mx-auto">+79171075735</p>
+          <p className="mt-4 mx-auto">Mail</p>
           <div className="grid grid-cols-3 gap-4">
             <a
-              href="https://t.me/your_channel"  // Замените на ссылку вашего канала в Telegram
+              href="https://t.me/Borodyula"  // Замените на ссылку вашего канала в Telegram
               className="text-[#B7CCBD] hover:text-white transition-colors"
               aria-label="Telegram"
             >
