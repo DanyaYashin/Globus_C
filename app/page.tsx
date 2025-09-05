@@ -47,7 +47,7 @@ export default function Home() {
       <main className="flex-grow container">
 
 
-        <div className="flex flex-col sm:flex-row h-svh w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD]"//Заглавный блок!!!!!!!!!!!!!!!
+        <div className="flex flex-col sm:flex-row h-full sm:h-svh w-svw bg-gradient-to-br from-[#ddd3cf] to-[#E7E0DD]"//Заглавный блок!!!!!!!!!!!!!!!
         >
           <section
             className="w-full sm:w-1/2 p-4 flex items-center justify-center relative h-1/3 sm:h-auto"
@@ -126,8 +126,8 @@ export default function Home() {
 
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
                   <div className="py-1">
-                    <a href="https://t.me/globuss63" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Globuss</a>
-                    <a href="https://t.me/Borodyula" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Borodyula</a>
+                    <a href="https://t.me/globuss63" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Рабочий</a>
+                    <a href="https://t.me/Borodyula" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Личный</a>
                   </div>
                 </div>
               </div>
@@ -158,6 +158,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <p className='md:text-sm text-xs font-medium text-gray-800 m-5 '>*Для клиентов всегда прямой доступ в личный кабинет налогоплательщика, сверка с енс, в кабинет с отправленными отчётами и доступ к электронному документообороту.</p>
           </section>
         </div>
 
@@ -174,7 +175,6 @@ export default function Home() {
                     <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">ООО</th>
                     <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">ИП с работниками</th>
                     <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">ИП без работников</th>
-                    <th className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 font-semibold xl:text-lg md:text-base sm:text-sm">Нулевая ООО</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -186,16 +186,15 @@ export default function Home() {
                         : "bg-gradient-to-r from-[#6E633D] to-[#8C7A4E] text-white"
                         }`}
                     >
-                      {Array.from({ length: 5 }).map((_, colIndex) => (
+                      {Array.from({ length: 4 }).map((_, colIndex) => (
                         <td key={colIndex} className="px-1 py-1 sm:px-3 sm:py-2 md:px:6 md:py-4 text-[#1E1E1E] font-medium xl:text-base text-sm">
                           <textarea
                             rows={5}
                             className="w-full bg-transparent outline-none text-[#1E1E1E] font-medium break-words whitespace-normal resize-none max-h-12 content-center"
                             defaultValue={rowIndex === 0 && colIndex === 0 ? "ОСНО" : rowIndex === 1 && colIndex === 0 ? "УСН доходы" : rowIndex === 2 && colIndex === 0 ? "УСН доходы-расходы" : rowIndex === 3 && colIndex === 0 ? "УСН с НДС доходы" : rowIndex === 4 && colIndex === 0 ? "УСН с НДС доходы-расходы" : rowIndex === 5 && colIndex === 0 ? "УСН + патент" : rowIndex === 6 && colIndex === 0 ? "Патент" :
                               rowIndex === 0 && colIndex === 1 ? "от 10 000 р в месяц" : rowIndex === 1 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 2 && colIndex === 1 ? "от 9 000 р в месяц" : rowIndex === 3 && colIndex === 1 ? "от 12 000 р в месяц" : rowIndex === 4 && colIndex === 1 ? "от 15 000 р в месяц" : rowIndex === 5 && colIndex === 1 ? "" : rowIndex === 6 && colIndex === 1 ? "" :
-                                rowIndex === 0 && colIndex === 2 ? "от 7 000 р в месяц" : rowIndex === 1 && colIndex === 2 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 2 ? "от 7 000 р в месяц" : rowIndex === 3 && colIndex === 2 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 2 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 2 ? "от 13 000 р в месяц" : rowIndex === 6 && colIndex === 2 ? "от 4 000 р в месяц" :
-                                  rowIndex === 0 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 1 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 2 && colIndex === 3 ? "от 8 000 р в месяц" : rowIndex === 3 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 4 && colIndex === 3 ? "от 4 000 р в месяц" : rowIndex === 5 && colIndex === 3 ? "от 4 000 р в месяц" : rowIndex === 6 && colIndex === 3 ? "от 3 000 р в месяц" :
-                                    rowIndex === 0 && colIndex === 4 ? "от 3 000 р в месяц" : rowIndex === 1 && colIndex === 4 ? "от 3 000 р в месяц" : rowIndex === 2 && colIndex === 4 ? "от 3 000 р в месяц" : rowIndex === 3 && colIndex === 4 ? "от 3 000 р в месяц" : rowIndex === 4 && colIndex === 4 ? "от 3 000 р в месяц" : rowIndex === 5 && colIndex === 4 ? "" : rowIndex === 6 && colIndex === 4 ? "" : ''}
+                                rowIndex === 0 && colIndex === 2 ? "от 8 000 р в месяц" : rowIndex === 1 && colIndex === 2 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 2 ? "от 8 000 р в месяц" : rowIndex === 3 && colIndex === 2 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 2 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 2 ? "от 10 000 р в месяц" : rowIndex === 6 && colIndex === 2 ? "от 4 000 р в месяц" :
+                                  rowIndex === 0 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 1 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 2 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 3 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 4 && colIndex === 3 ? "от 8 000 р в месяц" : rowIndex === 5 && colIndex === 3 ? "от 4 000 р в месяц" : rowIndex === 6 && colIndex === 3 ? "от 3 000 р в месяц" : ''}
                           />
                         </td>
                       ))}
@@ -207,7 +206,7 @@ export default function Home() {
 
             {/* Транспонированный вариант для мобильных экранов */}
             <div className="table:hidden flex flex-col gap-10 my-10">
-              {["ООО", "ИП с работниками", "ИП без работников", "Нулевая ООО"].map((header, colIndex) => (
+              {["ООО", "ИП с работниками", "ИП без работников"].map((header, colIndex) => (
                 <div key={colIndex} className="border rounded-lg shadow-lg overflow-hidden">
                   <div className="bg-gradient-to-r from-[#14281D] to-[#1F3C2C] px-6 py-4 font-semibold text-lg">
                     {header}
@@ -223,10 +222,9 @@ export default function Home() {
                           className="  bg-transparent outline-none text-right font-medium text-black w-full break-words whitespace-normal resize-none content-center"
                           rows={2}
                           defaultValue={
-                            rowIndex === 0 && colIndex === 0 ? "от 10 000 р в месяц" : rowIndex === 1 && colIndex === 0 ? "от 7 000 р в месяц" : rowIndex === 2 && colIndex === 0 ? "от 9 000 р в месяц" : rowIndex === 3 && colIndex === 0 ? "от 12 000 р в месяц" : rowIndex === 4 && colIndex === 0 ? "от 15 000 р в месяц" : rowIndex === 5 && colIndex === 0 ? "" : rowIndex === 6 && colIndex === 0 ? "" :
-                              rowIndex === 0 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 1 && colIndex === 1 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 3 && colIndex === 1 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 1 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 1 ? "от 13 000 р в месяц" : rowIndex === 6 && colIndex === 1 ? "от 4 000 р в месяц" :
-                                rowIndex === 0 && colIndex === 2 ? "от 3 000 р в месяц" : rowIndex === 1 && colIndex === 2 ? "от 6 000 р в месяц" : rowIndex === 2 && colIndex === 2 ? "от 8 000 р в месяц" : rowIndex === 3 && colIndex === 2 ? "от 3 000 р в месяц" : rowIndex === 4 && colIndex === 2 ? "от 4 000 р в месяц" : rowIndex === 5 && colIndex === 2 ? "от 4 000 р в месяц" : rowIndex === 6 && colIndex === 2 ? "от 3 000 р в месяц" :
-                                  rowIndex === 0 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 1 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 2 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 3 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 4 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 5 && colIndex === 3 ? "" : rowIndex === 6 && colIndex === 3 ? "" : ''}
+                            rowIndex === 0 && colIndex === 1 ? "от 10 000 р в месяц" : rowIndex === 1 && colIndex === 1 ? "от 7 000 р в месяц" : rowIndex === 2 && colIndex === 1 ? "от 9 000 р в месяц" : rowIndex === 3 && colIndex === 1 ? "от 12 000 р в месяц" : rowIndex === 4 && colIndex === 1 ? "от 15 000 р в месяц" : rowIndex === 5 && colIndex === 1 ? "" : rowIndex === 6 && colIndex === 1 ? "" :
+                              rowIndex === 0 && colIndex === 2 ? "от 8 000 р в месяц" : rowIndex === 1 && colIndex === 2 ? "от 5 000 р в месяц" : rowIndex === 2 && colIndex === 2 ? "от 8 000 р в месяц" : rowIndex === 3 && colIndex === 2 ? "от 10 000 р в месяц" : rowIndex === 4 && colIndex === 2 ? "от 12 000 р в месяц" : rowIndex === 5 && colIndex === 2 ? "от 10 000 р в месяц" : rowIndex === 6 && colIndex === 2 ? "от 4 000 р в месяц" :
+                                rowIndex === 0 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 1 && colIndex === 3 ? "от 3 000 р в месяц" : rowIndex === 2 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 3 && colIndex === 3 ? "от 6 000 р в месяц" : rowIndex === 4 && colIndex === 3 ? "от 8 000 р в месяц" : rowIndex === 5 && colIndex === 3 ? "от 4 000 р в месяц" : rowIndex === 6 && colIndex === 3 ? "от 3 000 р в месяц" : ''}
                         />
                       </div>
                     ))}
@@ -234,7 +232,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className='md:text-sm text-xs font-medium text-black my-5'>
+            <div className='md:text-sm text-xs font-medium text-gray-600 my-5'>
               <p>*Стоимость услуг увеличивается при наличии маркированных товаров, прослеживаемых товаров и экспортно/импортных операций.</p>
               <p>*Стоимость сдачи нулевых отчетов для ООО - от 3000 р в квартал.</p>
               <p>*Стоимость сдачи нулевых отчетов для ИП - от 3000 р в год.</p>
@@ -356,8 +354,8 @@ export default function Home() {
 
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
                 <div className="py-1">
-                  <a href="https://t.me/globuss63" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Globuss</a>
-                  <a href="https://t.me/Borodyula" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Borodyula</a>
+                  <a href="https://t.me/globuss63" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Рабочий</a>
+                  <a href="https://t.me/Borodyula" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Личный</a>
                 </div>
               </div>
             </div>
